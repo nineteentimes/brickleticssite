@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Brickletics</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- for social media sharing -->
+    <!-- facebook -->
+    <meta property="og:url" content="http://brickletics.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Brickletics" />
+    <meta property="og:description" content="Designing and building sports stadiums out of LEGO bricks" />
+    <meta property="og:image" content="http://brickletics.com/logos/Brickletics-Logo-With-Text-Purple-Base.png" />
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Brickletics" />
+    <meta name="twitter:description" content="Designing and building sports stadiums out of LEGO bricks" />
+    <meta name="twitter:image" content="http://brickletics.com/logos/Brickletics-Logo-With-Text-Purple-Base.png" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+    <div id="header">
+        <h1 hidden>Brickletics</h1>
+        <img id="logo" src="./logos/Brickletics-Logo-With-Text-Purple-Base.png" alt="Brickletics Header" />
+    </div>
+    <br/>
+    <div id="content">
+        <div class="linkCard">
+            <a href="https://www.youtube.com/@Brickletics">
+                <img src="./logos/youtube.png" alt="Brickletics on YouTube" />
+                <h2>YouTube</h2>
+            </a>
+        </div>
+        <div class="linkCard">
+            <a href="https://www.instagram.com/nineteentimesmusic">
+                <img src="./logos/instagram.png" alt="Brickletics on Instagram" />
+                <h2>Instagram</h2>
+            </a>
+        </div>
+        <div class="linkCard">
+            <a href="https://www.instagram.com/nineteentimesmusic">
+                <img src="./logos/tiktok.png" alt="Brickletics on TikTok" />
+                <h2>TikTok</h2>
+            </a>
+        </div>
+        <!-- <div class="linkCard">
+            <a href="https://www.instagram.com/nineteentimesmusic">
+                <img src="./logos/Brickletics-B-Black-Transparent.png" alt="About the Project" />
+                <h2>About</h2>
+            </a>
+        </div> -->
+        <div class="linkCard">
+            <a href="mailto:brickletics@gmail.com">
+                <img src="./logos/email.png" alt="Email Brickletics" />
+                <h2>Media / PR Inquiries</h2>
+            </a>
+        </div>
+    </div>
+    <br/>
+    <footer>&copy;
+        <script>document.write(new Date().getFullYear())</script> Brickletics
+        <p>LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site.</p>
+        <p>Brickletics is not affiliated with any professional sports team, professional sports organization, stadium authority, or stadium management company.</p>
+    </footer>
+
+    <script>
+        var isInstagram = navigator.userAgent.match(/instagram/i);
+        if (isInstagram) {
+            var head = document.querySelector('head');
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'style-i.css';
+            head.appendChild(link);
+        }
+    </script>
+
+</body>
+
+</html>

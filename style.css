@@ -1,0 +1,144 @@
+:root {
+    --brickletics-purple: #440e62;
+    --brickletics-white: white;
+    --brickletics-gray: rgb(131, 131, 131);
+}
+
+a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+h2 {
+    transform: scaleY(1.1);
+    font-size: 125%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0px;
+}
+
+h3 {
+    transform: scaleY(1.1);
+    font-size: 100%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0px;
+}
+
+#header {
+    background-color: var(--brickletics-purple);
+    color: var(--brickletics-white);
+    width: 100%;
+    height: 25%;
+}
+
+#header>img {
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+#content {
+    clear: both;
+    text-align: center;
+    padding-top: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.contentCard {
+    position: relative;
+    border-left: 5px solid var(--brickletics-purple);
+    width: 30%;
+    height: 80px;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+
+.linkCard {
+    position: relative;
+    border: 1px solid var(--brickletics-gray);
+    width: 30%;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+
+.linkCard:hover {
+    cursor: pointer;
+    color: var(--brickletics-purple) !important;
+    border-bottom: 5px solid var(--brickletics-purple);
+}
+
+.linkCard img {
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+}
+
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70%;
+    /*position:absolute;
+  bottom:10px;*/
+    width: 99%;
+    text-align: center;
+}
+
+/* mobile only */
+@media (pointer: coarse) {
+    h2 {
+        font-size: 250%;
+    }
+
+    h3 {
+        font-size: 150%;
+    }
+
+    a>img {
+        width: 85px;
+        height: 85px;
+        margin-left: 0;
+    }
+
+    #header {
+        width: 70%;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    #logo {
+        content: url("CAMMYT-header-black-TIGHT-MOBILE.png");
+    }
+
+    #content {
+        padding-top: 80px;
+        width: 100%;
+    }
+
+    .songlink {
+        width: 300px;
+        height: 229px;
+        transform: translateY(300px) scale(3);
+    }
+
+    .release {
+        margin-bottom: 650px;
+    }
+
+    footer {
+        font-size: 130%;
+    }
+}
