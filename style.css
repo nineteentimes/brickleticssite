@@ -4,6 +4,10 @@
     --brickletics-gray: rgb(131, 131, 131);
 }
 
+body {
+		overflow-y: scroll;
+}
+
 a {
     color: black;
     font-weight: bold;
@@ -18,6 +22,10 @@ h2 {
     margin: 0px;
 }
 
+.sectionHeading {
+	color: var(--brickletics-gray);
+}
+
 h3 {
     transform: scaleY(1.1);
     font-size: 100%;
@@ -26,20 +34,20 @@ h3 {
     margin: 0px;
 }
 
-#header {
+.header {
     background-color: var(--brickletics-purple);
     color: var(--brickletics-white);
     width: 100%;
     height: 25%;
 }
 
-#header>img {
+.header>img {
     width: 30%;
     margin-left: 35%;
     margin-right: 35%;
 }
 
-#content {
+.content {
     clear: both;
     text-align: center;
     padding-top: 10px;
@@ -63,14 +71,21 @@ h3 {
     position: relative;
     border: 1px solid var(--brickletics-gray);
     width: 30%;
-    height: 60px;
-    line-height: 60px;
+    height: 50px;
+    line-height: 50px;
     margin-left: 35%;
     margin-right: 35%;
     margin-bottom: 12px;
     border-radius: 10px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
+}
+
+.newsStory {
+	text-align: center;
+	margin-left: 15px;
+	font-size: 90%;
+	letter-spacing: 2px;
 }
 
 .linkCard:hover {
@@ -81,7 +96,7 @@ h3 {
 
 .linkCard img {
     position: absolute;
-    top: 15px;
+    top: 9px;
     bottom: 15px;
     left: 15px;
     width: 30px;
@@ -91,7 +106,7 @@ h3 {
 .footer {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 70%;
-    position: fixed;
+    position: relative;
     bottom: 10px;
     left: 0;
     right: 0;
@@ -107,16 +122,19 @@ h3 {
     h3 {
         font-size: 150%;
     }
-    #header {
+	.newsStory {
+		font-size: 200%;
+	}
+    .header {
         width: 100%;
     }
-    #header>img {
+    .header>img {
         width: 60%;
         margin-left: 20%;
         margin-right: 20%;
     }
 
-    #content {
+    .content {
         width: 94%;
         margin-left: 3%;
         margin-right: 3%;
