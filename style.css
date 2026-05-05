@@ -1,15 +1,20 @@
 :root {
     --brickletics-purple: #440e62;
-    --brickletics-white: white;
-    --brickletics-gray: rgb(131, 131, 131);
+    --brickletics-bkgrd: rgb(36, 36, 36);
+    --brickletics-gray: rgb(72, 72, 72);
+	--brickletics-text: rgb(240, 240, 240);
+	--brickletics-orange: #fe8a18;
+	--brickletics-black: #000000;
 }
 
 body {
 	min-width: 900px;
+	background-color: var(--brickletics-bkgrd);
+	color: var(--brickletics-text);
 }
 
 a {
-    color: black;
+    color: var(--brickletics-text);
     font-weight: bold;
     text-decoration: none;
 }
@@ -34,17 +39,23 @@ h3 {
 	color: var(--brickletics-gray);
 }
 
-#header {
-    background-color: var(--brickletics-purple);
-    color: var(--brickletics-white);
-    width: 100%;
-    height: 25%;
+#header_container {
+	background-image: url("brickletics_header2.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 35vh;
+	width: 100%;
 }
 
-#header>img {
-    width: 30%;
-    margin-left: 35%;
-    margin-right: 35%;
+#header {
+	height: 100%;
+	display: flex;
+	justify-content: center; /* Horizontal centering */
+}
+
+#header > #main_header {
+    height: 100%;
 }
 
 #content {
@@ -53,8 +64,44 @@ h3 {
     padding-top: 10px;
     font-family: Arial, sans-serif;
 }
+.contentMessage {
+	transform: scaleY(1.1);
+	font-size: 150%;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 10px 0;
+	background-color: var(--brickletics-gray);
+}
+.contentPurple {
+	border-bottom: 10px solid var(--brickletics-purple);
+}
+.contentOrange {
+	border-bottom: 10px solid var(--brickletics-orange);
+}
+.contentSubMessage {
+	transform: scaleY(1.1);
+	font-size: 95%;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.contentLongText {
+	text-transform: none !important;
+	letter-spacing: 1px !important;
+}
+.socialIcons {
+	display: flex;
+	justify-content: center;
+}
 
 .contentCard {
+	color: var(--brickletics-text);
     position: relative;
     border-left: 5px solid var(--brickletics-purple);
     width: 30%;
@@ -67,7 +114,19 @@ h3 {
     -webkit-box-sizing: border-box;
 }
 
+.socialCard {
+	margin: 10px 40px;
+    padding: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.socialCard:hover {
+    cursor: pointer;
+}
+
 .linkCard {
+	color: var(--brickletics-text);
     position: relative;
     border: 1px solid var(--brickletics-gray);
     width: 30%;
@@ -83,8 +142,7 @@ h3 {
 
 .linkCard:hover {
     cursor: pointer;
-    color: var(--brickletics-purple) !important;
-    border-bottom: 5px solid var(--brickletics-purple);
+    background-color: var(--brickletics-purple) !important;
 }
 
 .linkCard img {
@@ -94,6 +152,14 @@ h3 {
     left: 15px;
     width: 30px;
     height: 30px;
+}
+
+.socialCard img {
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
 }
 
 .footer {
@@ -106,32 +172,55 @@ h3 {
 /* mobile only */
 @media screen and (max-width: 1075px) {
     h2 {
-        font-size: 225%;
+        font-size: 220%;
     }
     h3 {
-        font-size: 150%;
+        font-size: 140%;
     }
+	#header_container {
+		background-image: none !important;
+		height: auto;
+	}
+	#header > #main_header {
+		height: auto;
+		width: 100%;
+	}
     #header {
+		/*height: auto;*/
         width: 100%;
-    }
-    #header>img {
-        width: 60%;
-        margin-left: 20%;
-        margin-right: 20%;
+		display: block;
+		margin-left: 0;
+		margin-right: 0;
     }
     #content {
-        width: 94%;
-        margin-left: 3%;
-        margin-right: 3%;
-        margin-top: 50px;
-    }
-    .linkCard {
-        position: relative;
         width: 100%;
-        height: 100px;
-        line-height: 100px;
         margin-left: 0;
         margin-right: 0;
+        margin-top: 10px;
+    }
+	.contentMessage {
+		transform: scaleY(1.1);
+		font-size: 175%;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		margin: 0;
+		margin-bottom: 10px;
+	}
+	.contentSubMessage {
+		transform: scaleY(1.1);
+		font-size: 120%;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+    .linkCard {
+        position: relative;
+        width: 96%;
+        height: 100px;
+        line-height: 100px;
+        margin-left: 2%;
+        margin-right: 2%;
         margin-bottom: 40px;
     }
     .linkCard img {
